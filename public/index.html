@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://a0.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico" type="image/x-icon">
+    <title>Airbnb Clone | Project</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="info.css">
+
+    <!--! FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <!--! MATERIAL ICONS CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- npx tailwindcss -i ./src/input.css -o ./public/style.css --watch -->
+</head>
+<body>
+    <header>
+        <div class="grid grid-cols-3 z-20 px-16 w-screen h-20 border-b-[1px] items-center fixed top-0 bg-white">
+            <img src="img/logo-2.png" alt="" class="h-16 w-28 cursor-pointer">
+            <div class="flex justify-center items-center border rounded-full shadow-md h-12 max-w-md ml-20">
+                <button class="btn text-sm font-medium px-4">Konaklama Yerleri</button>
+                <!-- <button class="border-r-2"></button> -->
+                <button class="btn text-sm font-medium px-4">En Beğenilenler</button>
+                <!-- <button class="border-r-2 "></button> -->
+                <button class="btn text-sm font-medium text-gray-500 px-4">Misafir Girişi</button>
+                
+                <i class="fa-solid fa-magnifying-glass cursor-pointer bg-red-500 text-white rounded-full ml-4 p-2"></i>
+            </div>
+            <div class="flex justify-end items-center gap-8 cursor-pointer">
+                <button class="text-sm font-medium">Airbnb your home!</button>
+                <span class="material-symbols-outlined">language</span>
+                <div class="flex justify-evenly items-center gap-2 rounded-full border shadow-md h-10 w-20 py-1.25 pr-1.25 pl-2">
+                    <i class="fa-solid fa-bars"></i>
+                    <button class="bg-black text-white rounded-full text-center w-7 h-7 text-[10px] font-semibold">E</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="flex items-center h-24 z-30 w-screen space-x-5 top-20 fixed bg-white border-b-[1px] ">
+        <div class="flex items-center justify-between w-full m-16 gap-10">
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c1.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Küçük evler</p>
+            </div>
+
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c2.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Üçgen evler</p>
+            </div>
+
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c3.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Muhteşem havuzlar</p>
+            </div>
+
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c4.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Tropik</p>
+            </div>
+
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c5.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Göl kenarı</p>
+            </div>
+
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c6.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Güzel manzaralar</p>
+            </div>
+
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c7.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Tekneler</p>
+            </div>
+
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c8.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Göl yakınında</p>
+            </div>
+
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c9.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Olağanüstü</p>
+            </div>
+
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c10.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Mağaralar</p>
+            </div>
+
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c11.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Kulübeler</p>
+            </div>
+
+            <div class="flex flex-col items-center text-gray-700 gap-2 cursor-pointer">
+                <img src="img/c12.jpg" alt="" class="h-6 w-6">
+                <p class="text-xs font-semibold">Denize sıfır</p>
+            </div>
+
+        </div>
+
+        <div class="flex justify-center items-center pr-16 cursor-pointer">
+            <span class="material-symbols-outlined pr-12">arrow_circle_right</span>
+            <div class="flex justify-around items-center rounded-xl shadow-md h-12 w-24 border hover:bg-red-100 cursor-pointer">
+                <span class="material-symbols-outlined">sync_alt</span>
+                <p class="text-xs font-medium pr-2 hover:text-red-700">Filters</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="search">
+        <div class="flex justify-center mt-48">
+            <div class="flex items-center justify-between p-4 border rounded-xl w-[600px] h-16">
+                <div class="flex justify-start">
+                    <p class="border-r-2 border-gray-200 pr-4 text-base font-medium">Tatilini Planla!</p>
+                    <input class="pl-4" style="outline: none;" type="text">
+                </div>
+                <!-- <span class="material-symbols-outlined">toggle_on</span> -->
+                <i class="fa-solid fa-magnifying-glass cursor-pointer bg-red-500 text-white rounded-full ml-4 p-2"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-5 mt-10 px-16 gap-x-24">
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img1.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Sapanca | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                    <p class="text-sm font-semibold">5.0</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">178 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4300₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img2.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Muğla | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">4.9</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">559 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">5800₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img3.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img4.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Mersin | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">880 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4250₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img5.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">6500₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img6.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img7.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Sapanca | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">5.0</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">178 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4300₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img8.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Muğla | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">4.9</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">559 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">5800 <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img9.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer" >
+            <img src="img/img10.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Mersin | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">880 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4250₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img11.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">6500₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img12.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img1.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Sapanca | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                    <p class="text-sm font-semibold">5.0</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">178 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4300₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img2.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Muğla | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">4.9</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">559 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">5800₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img3.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img4.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Mersin | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">880 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4250₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img5.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">6500₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img6.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img7.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Sapanca | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">5.0</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">178 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4300₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img8.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Muğla | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">4.9</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">559 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">5800 <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img9.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img10.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Mersin | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">880 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4250₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img11.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">6500₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img12.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img1.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Sapanca | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                    <p class="text-sm font-semibold">5.0</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">178 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4300₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img2.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Muğla | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">4.9</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">559 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">5800₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img3.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img4.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Mersin | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">880 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4250₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img5.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">6500₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img6.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img7.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Sapanca | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">5.0</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">178 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4300₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img8.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Muğla | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">4.9</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">559 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">5800 <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img9.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img10.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Mersin | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">880 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4250₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img11.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">6500₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img12.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img1.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Sapanca | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                    <p class="text-sm font-semibold">5.0</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">178 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4300₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img2.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Muğla | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">4.9</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">559 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">5800₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img3.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img4.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Mersin | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">880 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4250₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img5.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">6500₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img6.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img7.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Sapanca | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">5.0</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">178 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4300₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img8.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Muğla | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">4.9</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">559 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">5800 <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img9.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img10.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Mersin | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">880 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4250₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img11.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">6500₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72 cursor-pointer">
+            <img src="img/img12.webp" alt="" class="w-72 h-64 rounded-xl">
+            <div class="flex justify-between">
+                <p class="text-sm font-semibold mt-4">Antalya | Türkiye</p>
+                <div class="flex justify-center items-center mt-4">
+                    <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-semibold">New</p>
+                </div>
+            </div>
+            <p class="text-sm  text-gray-400">780 km</p>
+            <p class="text-sm text-gray-400 ">30 Haziran - 22 Temmuz</p>
+            <p class="text-sm font-medium text-gray-700">4890₺ <span class="font-semibold"> Gece </span></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="flex cursor-pointer justify-between h-12 items-center fixed bottom-0 bg-white w-full border-t-[1px]">
+            <div class="flex">
+                <p class="ml-16 font-semibold text-sm">© 2024 Airbnb, Inc.</p>
+                <p class="ml-4 font-semibold text-sm">·</p>
+                <p class="ml-4 font-semibold text-sm">Gizlilik Şartları </p>
+                <p class="ml-4 font-semibold text-sm">·</p>
+                <p class="ml-4 font-semibold text-sm">Site haritası</p>
+            </div>
+    
+            <div class="flex">
+                <span class="material-symbols-outlined">language</span>
+                <p class="mx-4 font-semibold text-sm">Türkçe (TR)</p>
+                <p class="mr-16 font-semibold text-sm">TRY ₺</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

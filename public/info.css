@@ -1,0 +1,30 @@
+header .btn{
+    height: 35px;
+    transition: all .3s ease;
+}
+
+header .btn:hover{
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.193);
+}
+
+header .fa-magnifying-glass{
+    transition: all .3s ease;
+}
+header .fa-magnifying-glass:hover{
+    background-color: black;
+    transform: scale(1.15);
+}
+.hero .flex-col{
+    transition: all .3s ease;
+}
+.hero .flex-col:hover{
+    transform: scale(1.20);
+}
+.grid img{
+    transition: all .4s ease;
+}
+.grid img:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(38, 57, 77, 0.536) 0px 20px 30px -10px;
+}
